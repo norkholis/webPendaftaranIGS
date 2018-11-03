@@ -1,0 +1,7 @@
+- require field (-upload file)
+- logo
+- alamat
+- jadwal
+- keterang di halaman utama
+
+password : 4VLeb4oA1Q0q!.
