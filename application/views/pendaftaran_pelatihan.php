@@ -110,14 +110,112 @@
 								</div>
 								</div>
 								<div class="col-md-6">
-                                <div class="form-group">
+                                	<div class="form-group">
 										<label>Jenis Kelamin</label>
 										<select class="form-control" type="text" name="gender" required="">
 											<option value="Laki-Laki">Laki-Laki</option>
 											<option value="Perempuan">Perempuan</option>
 										</select>
+										<label>Jenis layanan</label>
+										<select class="form-control" type="text" id="jenis_layanan" name="jenis_layanan" required="">
+											<option value="0">--Pilih--</option>
+											<?php foreach ($data->result() as $row):?>
+												<option value="<?php echo $row->id_layanan;?>"><?php echo $row->nama_layanan;?></option>
+											<?php endforeach;?>
+										</select>
+										<label>Pilihan</label>
+										<select class="layanan_pilihan form-control" type="text" name="layanan_pilihan" id="layanan_pilihan" required="">
+											<option value="0">--Pilih--</option>
+										</select>
 									</div>
-                                    <div class="panel panel-default">
+                                    
+									<div class="form-group">
+										<label>Jadwal</label>
+										<input class="form-control" type="text" name="jadwal" placeholder="Jadwal" readonly>
+									</div>
+									<div class="form-group">
+										<label>Jam</label>
+										<input class="form-control" type="text" name="jam" placeholder="Jam" readonly>
+									</div>
+									<div class="form-group">
+										<label>Tempat</label>
+										<input class="form-control" type="text" name="tempat" placeholder="tempat" readonly>
+									</div>
+									<div class="form-group">
+										<label>Harga</label>
+										<input class="form-control" type="text" name="harga" placeholder="Harga" readonly>
+                                	</div>
+									<button type="submit" class="btn btn-primary">Submit Button</button>
+									<button type="reset" class="btn btn-default">Reset Button</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div><!-- /.panel-->
+			</div><!-- /.col-->
+			<div class="col-sm-12">
+				
+			</div>
+		</div><!-- /.row -->
+    </div><!--/.main-->
+    
+	<!-- <script src="http://localhost/igsci/lumino/js/jquery-1.11.1.min.js"></script> -->
+	<script src="<?php echo base_url().'bootstrap/js/jquery-3.3.1.min.js'?>"></script>
+	<script src="http://localhost/igsci/lumino/js/bootstrap.min.js"></script>
+	<script src="http://localhost/igsci/lumino/js/bootstrap-datepicker.js"></script>
+	<script src="http://localhost/igsci/lumino/js/custom.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#jenis_layanan').change(function(){
+				var id=$(this).val();
+				$.ajax({
+					url : "<?php echo base_url();?>index.php/Regis_Pelatihan/getDetailLayanan",
+					method : "POST",
+					data : {id: id},
+					dataType : 'json',
+					success : function(data){
+						console.log(data);
+						var html = '';
+						var i;
+						for (i=0; i<data.length; i++){
+							html += '<option value='+data[i].id_detail+'>'+data[i].detail_nama_layanan+'</option>';
+						}
+						$('.layanan_pilihan').html(html);
+					}
+				});
+			});
+		});
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#layanan_pilihan').change(function(){
+				var id = $(this).val();
+				$.ajax({
+					type : "POST",
+					url  : "<?php echo base_url();?>index.php/Regis_Pelatihan/getRincian",
+					data : {id: id},
+					cache : false,
+					success : function(data){
+						var dataa = $.parseJSON(data);
+						console.log(data);
+						$.each(dataa, function(id_detail, tanggal_layanan, harga_layanan, jam_layanan, tempat_layanan, fk_id_layanan, detail_nama_layanan){
+							$('[name="jadwal"]').val(dataa.tanggal_layanan);
+							$('[name="jam"]').val(dataa.jam_layanan);
+							$('[name="tempat"]').val(dataa.tempat_layanan);
+							$('[name="harga"]').val(dataa.harga_layanan);
+						});
+					}
+				});
+				return false;
+			});
+		});
+	</script>
+    
+</body>
+</html>
+
+
+<!-- <div class="panel panel-default">
                                         <div class="panel-body tabs">
                                             <ul class="nav nav-tabs">
                                                 <li class="active"><a href="#tab1" data-toggle="tab">Pelatihan</a></li>
@@ -176,25 +274,4 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-									<button type="submit" class="btn btn-primary">Submit Button</button>
-									<button type="reset" class="btn btn-default">Reset Button</button>
-								</div>
-							</form>
-						</div>
-					</div>
-				</div><!-- /.panel-->
-			</div><!-- /.col-->
-			<div class="col-sm-12">
-				
-			</div>
-		</div><!-- /.row -->
-    </div><!--/.main-->
-    
-    <script src="http://localhost/igsci/lumino/js/jquery-1.11.1.min.js"></script>
-	<script src="http://localhost/igsci/lumino/js/bootstrap.min.js"></script>
-	<script src="http://localhost/igsci/lumino/js/bootstrap-datepicker.js"></script>
-	<script src="http://localhost/igsci/lumino/js/custom.js"></script>
-    
-</body>
-</html>
+                                    </div> -->
