@@ -35,7 +35,7 @@ class Regis_Pelatihan extends CI_Controller{
 
     public function proses_add()
     {
-            $pelatihan = implode(',', $_POST['pelatihan']);
+        
             $nama = $this->input->post('nama');
             $tl = $this->input->post('tl');
             $alamat = $this->input->post('alamat');
@@ -44,12 +44,19 @@ class Regis_Pelatihan extends CI_Controller{
             $file = $this->input->post('file_upload');
             $keterbatasan = $this->input->post('keterbatasan');
             $gender = $this->input->post('gender');
-            $sertifikasi = $this->input->post('sertiifikasi');
-            $jumlah_keseluruhan = 600;
+            $layanan = $this->input->post('layanan_pilihan');
+            $jumlah_keseluruhan = $this->input->post('harga');
+            $tempat = $this->input->post('tempat');
+            $jam = $this->input->post('jam');
 
-            $this->Regis_model->addPendaftar($nama, $alamat, $email, $tl, $no_telp, $file, $keterbatasan, $gender, $pelatihan, $sertifikasi, $jumlah_keseluruhan);
+            $this->Regis_model->addPendaftar($nama, $alamat, $email, $tl, $no_telp, $file, $keterbatasan, $gender, $jumlah_keseluruhan, $tempat, $jam, $layanan);
             
-            $this->load->view('instruksi_pembayaran');
+            $data = array();
+            $data['nama'] = $nama;
+            $data['email'] = $email;
+            $data['jumlah_keseluruhan'] = $jumlah_keseluruhan;
+            $this->load->view('instruksi_pembayaran', $data);
+            
         
     }
 }

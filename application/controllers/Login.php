@@ -26,10 +26,12 @@ class Login extends CI_Controller{
             if ($data['role']=='admin') {
                 $this->session->set_userdata('akses', 'admin');
                 $this->session->set_userdata('ses_id', $data['username']);
+                $this->session->set_userdata('ses_email', $data['email']);
                 redirect('admin');//isi dengan controller yang dituju
             }elseif ($data['role']=='pendaftar') {
                 $this->session->set_userdata('akses', 'pendaftar');
                 $this->session->set_userdata('ses_id', $data['username']);
+                $this->session->set_userdata('ses_email', $data['email']);
                 redirect('regis_pelatihan');
             }
         }else {

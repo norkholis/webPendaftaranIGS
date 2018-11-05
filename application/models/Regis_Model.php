@@ -3,9 +3,9 @@ class Regis_model extends CI_Model
 {
 
 
-    function addPendaftar($nama, $alamat, $email, $tl, $no_telp, $file_upload, $tambahan, $jenis_kelamin, $pelatihan, $sertifikasi, $jumlah_bayar)
+    function addPendaftar($nama, $alamat, $email, $tl, $no_telp, $file_upload, $tambahan, $jenis_kelamin, $jumlah_bayar, $tempat, $jam, $layanan)
     {
-        $query="insert into pendaftar values('', '$nama', '$alamat', '$email', '$tl', '$no_telp', '$file_upload', '$tambahan', '$jenis_kelamin', '$pelatihan', '$sertifikasi', '$jumlah_bayar')";
+        $query="insert into pendaftar values('', '$nama', '$alamat', '$email', '$tl', '$no_telp', '$file_upload', '$tambahan', '$jenis_kelamin', '$jumlah_bayar', '$tempat', '$jam', '$layanan')";
         $this->db->query($query);
     }
 
@@ -38,5 +38,11 @@ class Regis_model extends CI_Model
             }
         }
         return $detail;
+    }
+
+    function getDataPembayaran($email)
+    {
+        $data = $this->db->query("SELECT * nama_pendaftar, email_pendaftar, jumlah_bayar FROM pendaftar WHERE email_pendaftar='$email'");
+        return $data->result();
     }
 }

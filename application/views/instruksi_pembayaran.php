@@ -59,6 +59,9 @@
 				<div class="panel panel-blue">
 					<div class="panel-heading dark-overlay">Transfer Rekening</div>
 					<div class="panel-body">
+						<h3 style="color : #ffffff; text-align : center;"><?php echo $nama;?></h3>
+						<h3 style="color : #ffffff; text-align : center;">Email : <?php echo $email;?></h3>
+						<h3 style="color : #ffffff; text-align : center;">Jumlah Yang Harus dibayar : <?php echo $jumlah_keseluruhan;?></h3>
                         <p>Pembayaran transfer rekening dapat dilakukan dengan datang langsung ke teller bank yang dituju, maupun melalui mesin ATM terdekat</p>
 						<h5>Pembayaran Melalui Mesin ATM</h5>
 						<p>1. Pastikan anda sudah memasukkan kartu dan password ke mesin ATM</p>
