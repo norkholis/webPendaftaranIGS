@@ -107,8 +107,10 @@
 		</form>
 		<ul class="nav menu">
 			<li class="active"><a href="index.html"><em class="fa fa-dashboard">&nbsp;</em> Dashboard</a></li>
-			<li><a href="widgets.html"><em class="fa fa-calendar">&nbsp;</em> User</a></li>
-			<li><a href="charts.html"><em class="fa fa-bar-chart">&nbsp;</em> Berita</a></li>
+			<li><a href="<?php echo base_url().'index.php/Admin/user_manajemen'?>"><em class="fa fa-calendar">&nbsp;</em> User</a></li>
+			<li><a href="<?php echo base_url().'index.php/Admin/berita_manajemen'?>"><em class="fa fa-bar-chart">&nbsp;</em> Berita</a></li>
+			<li><a href="<?php echo base_url().'index.php/Admin/manajemen_layanan'?>"><em class="fa fa-bar-chart">&nbsp;</em> Manajemen Layanan</a></li>
+			<li><a href="<?php echo base_url().'index.php/Admin/manajemen_detail_layanan'?>"><em class="fa fa-bar-chart">&nbsp;</em>Detail Layanan</a></li>
 			<li><a href="login.html"><em class="fa fa-power-off">&nbsp;</em> Logout</a></li>
 		</ul>
 	</div><!--/.sidebar-->
@@ -149,21 +151,8 @@
 	<script src="http://localhost/igsci/lumino/js/bootstrap.min.js"></script>
 	<script src="http://localhost/igsci/lumino/js/chart.min.js"></script>
 	<script src="http://localhost/igsci/lumino/js/chart-data.js"></script>
-	<script src="http://localhost/igsci/lumino/js/easypiechart.js"></script>
-	<script src="http://localhost/igsci/lumino/js/easypiechart-data.js"></script>
 	<script src="http://localhost/igsci/lumino/js/bootstrap-datepicker.js"></script>
 	<script src="http://localhost/igsci/lumino/js/custom.js"></script>
-	<script>
-		window.onload = function () {
-	var chart1 = document.getElementById("line-chart").getContext("2d");
-	window.myLine = new Chart(chart1).Line(lineChartData, {
-	responsive: true,
-	scaleLineColor: "rgba(0,0,0,.2)",
-	scaleGridLineColor: "rgba(0,0,0,.05)",
-	scaleFontColor: "#c5c7cc"
-	});
-};
-	</script>
 		
 </body>
 </html>

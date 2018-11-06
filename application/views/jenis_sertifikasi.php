@@ -38,63 +38,17 @@
 			<div class="col-lg-12">
 				<h2>Sertifikasi</h2>
 			</div>
+			<?php foreach ($data->result() as $row): ?>
 			<div class="col-md-4">
 				<div class="panel panel-default">
-					<div class="panel-heading">Practical Office</div>
+					<div class="panel-heading"><?php echo $row->detail_nama_layanan; ?></div>
 					<div class="panel-body">
-                        <p>Sertifikasi ini bertujuan untuk mengukur kompetensi peserta tentang pengetahuan mereka pada aplikasi Microsoft Office</p>
-                        <p>Harga : Rp. 450.000</p>
+                        <p><?php echo $row->deskripsi; ?></p>
+                        <p>Harga : Rp. <?php echo $row->harga_layanan;?></p>
 					</div>
 				</div>
 			</div>
-			<div class="col-md-4">
-				<div class="panel panel-primary">
-					<div class="panel-heading">Practical Programming</div>
-					<div class="panel-body">
-                        <p>Sertifikasi ini bertujuan untuk mengukur kompetensi peserta tentang pengetahuan mereka pada dasar-dasar Pemrograman</p>
-                        <p>Harga : Rp. 950.000</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-success">
-					<div class="panel-heading">Microsoft Visual Basic</div>
-					<div class="panel-body">
-                        <p>Pada pelatihan ini peserta akan diajarkan dasar-dasar pemrograman visual basic dengan langsung dengan studi kasus untuk praktek.</p>
-                        <p>Harga : Rp. 950.000</p>
-					</div>
-				</div>
-			</div>
-        </div>
-
-        <div class="row">
-			<div class="col-md-4">
-				<div class="panel panel-info">
-					<div class="panel-heading">Java</div>
-					<div class="panel-body">
-                        <p>Pada pelatihan ini peserta akan diajarkan dasar-dasar pemrograman dengan bahasa Java. Tak hanya itu peserta juga akan langsung praktek dengan studi kasus yang diberikan untuk mengimplementasikan hasil belajar</p>
-                        <p>Harga : Rp. 1.020.000</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-warning">
-					<div class="panel-heading">Desain</div>
-					<div class="panel-body">
-                        <p>Pelatihan ini peserta akan dijarkan untuk membuat desain dengan memanfaatkan software Adobe Photoshop, dan CorelDraw.</p>
-                        <p>Harga : Rp. 650.000</p>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-4">
-				<div class="panel panel-danger">
-					<div class="panel-heading">Web Developer</div>
-					<div class="panel-body">
-                        <p>Pada pelatihan ini peserta akan diberikan materi tentang dasar-dasar untuk membuat sebuah web lengkap dengan studi kasus yang terkini</p>
-                        <p>Harga : Rp. 950.000</p>
-					</div>
-				</div>
-			</div>
+			<?php endforeach; ?>
 		</div>
 	
 		

@@ -39,10 +39,4 @@ class Regis_model extends CI_Model
         }
         return $detail;
     }
-
-    function getDataPembayaran($email)
-    {
-        $data = $this->db->query("SELECT * nama_pendaftar, email_pendaftar, jumlah_bayar FROM pendaftar WHERE email_pendaftar='$email'");
-        return $data->result();
-    }
 }
