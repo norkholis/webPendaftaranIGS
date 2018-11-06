@@ -7,9 +7,9 @@ defined('BASEPATH') OR exit('No direct script access allowed');
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- <style type="text/css" rel="stylesheet" src="localhost/igsci/bootstrap/css/bootstrap.min.css"></style> -->
-    <link rel="stylesheet" href="http://localhost/igsci/lumino/css/bootstrap.min.css">
-    <link href="http://localhost/igsci/lumino/css/datepicker3.css" rel="stylesheet">
-	  <link href="http://localhost/igsci/lumino/css/styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="<?php echo base_url().'lumino/css/bootstrap.min.css'?>">
+    <link href="<?php echo base_url().'lumino/css/datepicker3.css'?>" rel="stylesheet">
+	  <link href="<?php echo base_url().'lumino/css/styles.css'?>" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <title>Login</title>
     

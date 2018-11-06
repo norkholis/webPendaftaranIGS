@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pendaftaran Pelatihan</title>
 
-    <link href="http://localhost/igsci/lumino/css/bootstrap.min.css" rel="stylesheet">
-	<link href="http://localhost/igsci/lumino/css/font-awesome.min.css" rel="stylesheet">
-	<link href="http://localhost/igsci/lumino/css/datepicker3.css" rel="stylesheet">
-    <link href="http://localhost/igsci/lumino/css/styles.css" rel="stylesheet">
+    <link href="<?php echo base_url().'lumino/css/bootstrap.min.css'?>" rel="stylesheet">
+	<link href="<?php echo base_url().'lumino/css/font-awesome.min.css'?>" rel="stylesheet">
+	<link href="<?php echo base_url().'lumino/css/datepicker3.css'?>" rel="stylesheet">
+    <link href="<?php echo base_url().'lumino/css/styles.css'?>" rel="stylesheet">
 
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
@@ -22,16 +22,16 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span></button>
-				<a class="navbar-brand" href="#"><span>IGS</span> SKILL DEVELOPMENT</a>
+				<a class="navbar-brand" href="<?php echo base_url()?>"><span>IGS</span> SKILL DEVELOPMENT</a>
 				
 			</div>
 		</div><!-- /.container-fluid -->
 	</nav>
 	<div id="sidebar-collapse" class="col-sm-3 col-lg-2 sidebar">
 		<ul class="nav menu">
-			<li><a href="/igsci/index.php"><em class="fa fa-dashboard">&nbsp;</em> Halaman Utama</a></li>
-			<li><a href="index.php/Welcome/showPelatihan"><em class="fa fa-calendar">&nbsp;</em> Jenis-Jenis Pelatihan</a></li>
-			<li><a href="index.php/Welcome/Pembayaran"><em class="fa fa-bar-chart">&nbsp;</em> Cara Pembayaran</a></li>
+			<li><a href="<?php echo base_url()?>"><em class="fa fa-dashboard">&nbsp;</em> Halaman Utama</a></li>
+			<li><a href="<?php echo base_url().'index.php/Welcome/showPelatihan'?>"><em class="fa fa-calendar">&nbsp;</em> Jenis-Jenis Pelatihan</a></li>
+			<li><a href="<?php echo base_url().'index.php/Welcome/Pembayaran'?>"><em class="fa fa-bar-chart">&nbsp;</em> Cara Pembayaran</a></li>
 			<li><a href="#"><em class="fa fa-toggle-off">&nbsp;</em> Lokasi Kami</a></li>
 		</ul>
 	</div><!--/.sidebar-->
@@ -89,10 +89,9 @@
 		</div><!-- /.row -->
     </div><!--/.main-->
     
-    <script src="http://localhost/igsci/lumino/js/jquery-1.11.1.min.js"></script>
-	<script src="http://localhost/igsci/lumino/js/bootstrap.min.js"></script>
-	<script src="http://localhost/igsci/lumino/js/bootstrap-datepicker.js"></script>
-	<script src="http://localhost/igsci/lumino/js/custom.js"></script>
+    <script src="<?php echo base_url().'lumino/js/jquery-1.11.1.min.js'?>"></script>
+	<script src="<?php echo base_url().'lumino/js/bootstrap.min.js'?>"></script>
+	<script src="<?php echo base_url().'lumino/js/custom.js'?>"></script>
     
 </body>
 </html>

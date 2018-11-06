@@ -10,10 +10,10 @@
 	    <link type="text/css" rel="stylesheet" href="<?php echo $file; ?>" />
     <?php endforeach; ?>
 
-	<link href="http://localhost/igsci/lumino/css/bootstrap.min.css" rel="stylesheet">
-	<link href="http://localhost/igsci/lumino/css/font-awesome.min.css" rel="stylesheet">
-	<link href="http://localhost/igsci/lumino/css/datepicker3.css" rel="stylesheet">
-    <link href="http://localhost/igsci/lumino/css/styles.css" rel="stylesheet">
+	<link href="<?php echo base_url().'lumino/css/bootstrap.min.css'?>" rel="stylesheet">
+	<link href="<?php echo base_url().'lumino/css/font-awesome.min.css'?>" rel="stylesheet">
+	<link href="<?php echo base_url().'lumino/css/datepicker3.css'?>" rel="stylesheet">
+    <link href="<?php echo base_url().'lumino/css/styles.css'?>" rel="stylesheet">
     
 	
 	<!--Custom Font-->
@@ -148,11 +148,11 @@
 	</div>	<!--/.main-->
 	
 	<!-- <script src="http://localhost/igsci/lumino/js/jquery-1.11.1.min.js"></script> -->
-	<script src="http://localhost/igsci/lumino/js/bootstrap.min.js"></script>
-	<script src="http://localhost/igsci/lumino/js/chart.min.js"></script>
-	<script src="http://localhost/igsci/lumino/js/chart-data.js"></script>
-	<script src="http://localhost/igsci/lumino/js/bootstrap-datepicker.js"></script>
-	<script src="http://localhost/igsci/lumino/js/custom.js"></script>
+	<script src="<?php echo base_url().'lumino/js/bootstrap.min.js'?>"></script>
+	<script src="<?php echo base_url().'lumino/js/chart.min.js'?>"></script>
+	<script src="<?php echo base_url().'lumino/js/chart-data.js'?>"></script>
+	<script src="<?php echo base_url().'lumino/js/bootstrap-datepicker.js'?>"></script>
+	<script src="<?php echo base_url().'lumino/js/custom.js'?>"></script>
 		
 </body>
 </html>

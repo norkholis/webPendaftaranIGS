@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Pendaftaran Pelatihan</title>
 
-    <link href="http://localhost/igsci/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url().'bootstrap/css/bootstrap.min.css'?>" rel="stylesheet">
 
 	<!-- <link href="https://lkp.igsindonesia.com/lumino/css/bootstrap.min.css"> -->
 
@@ -23,10 +23,10 @@
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="#">Jenis Pelatihan</a>
-      <a class="nav-item nav-link" href="#">Jenis Sertifikasi</a>
-      <a class="nav-item nav-link" href="#">Pendaftaran</a>
+      <a class="nav-item nav-link active" href="<?php echo base_url().'index.php'?>">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="<?php echo base_url().'index.php/Welcome/showPelatihan'?>">Jenis Pelatihan</a>
+      <a class="nav-item nav-link" href="<?php echo base_url().'index.php/Welcome/showSertifikasi'?>">Jenis Sertifikasi</a>
+      <a class="nav-item nav-link" href="<?php echo base_url().'index.php/Regis_Pelatihan'?>">Pendaftaran</a>
     </div>
   </div>
 </nav>
@@ -78,8 +78,8 @@
 	</div>
 	</div>
     
-    <script src="http://localhost/igsci/lumino/js/jquery-1.11.1.min.js"></script>
-	<script src="http://localhost/igsci/bootstrap/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url().'lumino/js/jquery-1.11.1.min.js'?>"></script>
+	<script src="<?php echo base_url().'bootstrap/js/bootstrap.min.js'?>"></script>
     
 </body>
 </html>
