@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html>
+<?php
+	if(isset($this->session->userdata['akses'])){
+		
+	}else {
+		redirect('login');
+	}
+?>
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -127,7 +134,8 @@
 		
 		<div class="row">
 			<div class="col-lg-12">
-				<h1 class="page-header">Dashboard</h1>
+				<?php $nama = $this->session->userdata['ses_id']; ?>
+				<h1 class="page-header"><? $nama ?></h1>
 			</div>
         </div><!--/.row-->
         

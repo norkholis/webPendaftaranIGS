@@ -23,6 +23,12 @@ class Welcome extends CI_Controller {
 		$this->load->view('jenis_pelatihan', $y);
 	}
 
+	public function testPelatihan()
+	{
+		$d['data'] = $this->Welcome_model->getPelatihan();
+		$this->load->view('pelatihan', $d);
+	}
+
 	public function showSertifikasi()
 	{
 		$x['data'] = $this->Welcome_model->getSertifikasi();
